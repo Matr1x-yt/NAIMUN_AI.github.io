@@ -26,7 +26,7 @@
 }
 
 .main-container .greet span{
-    font-size: 65px;
+    font-size: 63px;
     background: -webkit-linear-gradient(16deg,#656e7f,#194b86);
     background-clip: text;
     -webkit-background-clip: text;
@@ -49,8 +49,7 @@
     flex: 1;
     min-height: 200px;
     height: 300px;
-    min-width: 100px;
-    max-width: 400px;
+    width: 400px;
     padding: 15px;
     background-color: #f0f4f9;
     border-radius: 10px;
@@ -58,16 +57,16 @@
     cursor: pointer;
 }
 
-.main-container .cards .cardnato {
-    background-image: url('../assets/nato_icon.png');
-    background-size:500px;
+.main-container .cards .cardeuro {
+    background-image: url('../assets/european_commission_icon.png');
+    background-size:400px;
     background-position-x: center;
-    background-position-y: 0px;
+    background-position-y: 50px;
     background-repeat: no-repeat;
 }
 
-.main-container .cards .cardbvc {
-    background-image: url('../assets/bvc_icon.png');
+.main-container .cards .card-ccpcj {
+    background-image: url('../assets/crime_prevention_icon.png');
     background-size:275px;
     background-position-x: center;
     background-position-y: 75px;

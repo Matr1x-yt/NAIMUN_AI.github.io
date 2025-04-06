@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import runChat from "../config/berkeley";
+import runChat from "../config/naimun";
 
 export const Context = createContext();
 

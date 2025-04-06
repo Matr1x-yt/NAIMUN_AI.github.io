@@ -29,7 +29,7 @@ async function runChat(prompt) {
 
     const run = await openai.beta.threads.runs.createAndPoll(
         thread.id,
-        { assistant_id: "asst_4riT5nCJC6jJ3zynzl4s2sSb" }
+        { assistant_id: "asst_AMdC7DBqpqnwRRUBoDlct3mv" }
       );
 
     const messages = await openai.beta.threads.messages.list(

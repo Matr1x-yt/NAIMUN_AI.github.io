@@ -53,17 +53,17 @@ const Main = () => {
                 ?
                 <>
                     <div className="greet">
-                        <p><span>Hello, Welcome to BMUN AI.</span></p>
+                        <p><span>Hello, Welcome to NAIMUN AI.</span></p>
                         <p>Please pick a conference type.</p>
                     </div>
                     <div className="cards">
-                        <div className="cardnato" onClick={(e) => handleCardClick("North Atlantic Treaty Organization (NATO)")}>
-                            <p>North Atlantic Treaty Organization (NATO)</p>
-                            <img src={assets.berkeley_icon} alt="" />
+                        <div className="cardeuro" onClick={(e) => handleCardClick("European Commission")}>
+                            <p>European Commission</p>
+                            <img src={assets.NAIMUN_icon} alt="" />
                         </div>
-                        <div className="cardbvc" onClick={(e) => handleCardClick("Berkley Venture Capital (BVC)")}>
-                            <p>Berkley Venture Capital (BVC)</p>
-                            <img src={assets.berkeley_icon} alt="" />
+                        <div className="card-ccpcj" onClick={(e) => handleCardClick("Commission on Crime Prevention and Criminal Justice")}>
+                            <p>Commission on Crime Prevention and Criminal Justice</p>
+                            <img src={assets.NAIMUN_icon} alt="" />
                         </div>
                     </div>
                 </>
@@ -72,7 +72,7 @@ const Main = () => {
                     <div className='result' ref={resultContainerRef} onScroll={handleScroll}>
                         {messages.map((message, i) =>
                             <div key={i} className={!message.isBot?"result-user":"result-message"}>
-                                <img src={!message.isBot?assets.user_icon:assets.berkeley_icon} alt='' />
+                                <img src={!message.isBot?assets.user_icon:assets.NAIMUN_icon} alt='' />
                                 {message.isBot?
                                     <github-md dangerouslySetInnerHTML={{ __html: i === messages.length - 1 ? resultMessage : message.text }}></github-md>
                                     :
@@ -92,7 +92,7 @@ const Main = () => {
                             </div>
                         </div>
                         <p className='bottom-info'>
-                        BMUN AI might display inaccurate info so double check its response.
+                        NAIMUN AI might display inaccurate info so double check its response.
                         </p>
                     </div>
                 </>
