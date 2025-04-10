@@ -10,12 +10,18 @@ const Main = () => {
 
     const {onSent,showResult,loading,resultMessage,resultEnd,setInput,input,messages, isAtBottom, setIsAtBottom} = useContext(Context)
 
+    const autoResizeTextarea = (e) => {
+        const textarea = e.target;
+        textarea.style.height = "30px"; // Reset height
+        textarea.style.height = textarea.scrollHeight + "px"; // Set to scrollHeight
+    };
+
     useEffect(() => {
         renderMarkdown(); // Refreshes the markdown format
 
         // If the user has NOT scrolled up, auto-scroll
         if (isAtBottom) {
-            msgEnd.current?.scrollIntoView({ behavior: 'smooth' });
+            msgEnd.current?.scrollIntoView();
         }
     }, [messages, resultMessage]);
 
@@ -27,11 +33,12 @@ const Main = () => {
     };
 
     const enterPressed = async (e) => {
-        if (e.key === 'Enter') {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();  // Prevents newline from being inserted
             await sendMessage();
             setIsAtBottom(true);
         }
-    }
+    };
 
     const sendMessage = async () => {
         if (!loading && resultMessage === resultEnd) {
@@ -84,7 +91,15 @@ const Main = () => {
                     </div>
                     <div className="main-bottom">
                         <div className="search-box">
-                            <input onChange={(e)=>setInput(e.target.value)} value={input} onKeyDown={enterPressed} type='text' placeholder='Enter a prompt here'/>
+                            <textarea
+                                value={input}
+                                onChange={(e) => {
+                                    setInput(e.target.value);
+                                    autoResizeTextarea(e);
+                                }}
+                                onKeyDown={enterPressed}
+                                placeholder="Enter a prompt here"
+                            />
                             <div>
                                 <img src={assets.gallery_icon} alt="" />
                                 <img src={assets.mic_icon} alt="" />
