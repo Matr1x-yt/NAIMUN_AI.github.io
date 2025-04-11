@@ -68,11 +68,14 @@ const Main = () => {
                             <p>European Commission</p>
                             <img src={assets.NAIMUN_icon} alt="" />
                         </div>
-                        <div className="card-ccpcj" onClick={(e) => handleCardClick("Commission on Crime Prevention and Criminal Justice (Interpol)(Double-Delegation)")}>
-                            <p>International Criminal Police Organization (INTERPOL)(Double-Delegation)</p>
+                        <div className="card-ccpcj" onClick={(e) => handleCardClick("Interpol (Double-Delegation)")}>
+                            <p>Interpol (Double-Delegation)</p>
                             <img src={assets.NAIMUN_icon} alt="" />
                         </div>
                     </div>
+                    <p className="disclaimer">
+                    This is an experimental project done by students of the Oxford Team. In no way should you rely solely on the AI for research and Rules of Procedure. If you run into issues, please refer to official documents.
+                    </p>
                 </>
                 :
                 <>
