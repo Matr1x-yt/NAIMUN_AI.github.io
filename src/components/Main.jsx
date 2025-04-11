@@ -68,8 +68,8 @@ const Main = () => {
                             <p>European Commission</p>
                             <img src={assets.NAIMUN_icon} alt="" />
                         </div>
-                        <div className="card-ccpcj" onClick={(e) => handleCardClick("Commission on Crime Prevention and Criminal Justice")}>
-                            <p>Commission on Crime Prevention and Criminal Justice</p>
+                        <div className="card-ccpcj" onClick={(e) => handleCardClick("Commission on Crime Prevention and Criminal Justice (Interpol)(Double-Delegation)")}>
+                            <p>Commission on Crime Prevention and Criminal Justice (Interpol)(Double-Delegation)</p>
                             <img src={assets.NAIMUN_icon} alt="" />
                         </div>
                     </div>
