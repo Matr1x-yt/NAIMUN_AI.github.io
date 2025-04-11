@@ -92,6 +92,15 @@
     background-color: #dfe4ea;
 }
 
+.disclaimer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 750px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
 .main-bottom{
     position: absolute;
     bottom: 0;
