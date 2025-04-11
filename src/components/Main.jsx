@@ -110,7 +110,7 @@ const Main = () => {
                             </div>
                         </div>
                         <p className='bottom-info'>
-                        NAIMUN AI might display inaccurate info so double check its response.
+                        NAIMUN AI might display inaccurate info so double check its response and please refer to official documents.
                         </p>
                     </div>
                 </>
