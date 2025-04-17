@@ -21,7 +21,7 @@ const Main = () => {
 
         // If the user has NOT scrolled up, auto-scroll
         if (isAtBottom) {
-            msgEnd.current?.scrollIntoView();
+            // msgEnd.current?.scrollIntoView(); // MAIN LINE RESPONSIBLE FOR SCROLLING
         }
     }, [messages, resultMessage]);
 
